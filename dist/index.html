@@ -5,9 +5,88 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="../src/styles/sidenav.css">
+    <link rel="stylesheet" href="../src/styles/general.css">
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/main-content.css">
+    <link rel="stylesheet" href="../src/styles/todo-container.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>To-Do</title>
 </head>
 <body>
+<div class="content">
+    <header>
+        <h1 class="title">// To-Do list <i class="fa-solid fa-list-check"></i></h1>
+    </header>
+    <div class="main-content">
+        <nav class="sidenav">
+            <ul>
+                <li class="with-circle sidenav-link">Home<span class="task-count">7</span></li>
+                <li class="with-circle sidenav-link">Today<span class="task-count">2</span></li>
+                <li class="with-circle sidenav-link">Week<span class="task-count">3</span></li>
+                <li>
+                    <span class="item-title">Projects</span>
+                    <ul class="sub-menu">
+                        <li class="with-circle sidenav-link"><span class="sub-menu_title">Home</span><span
+                                class="task-count">3</span></li>
+                        <li class="with-circle sidenav-link"><span class="sub-menu_title">Study</span><span
+                                class="task-count">3</span></li>
+                        <li class="with-circle sidenav-link"><span class="sub-menu_title">Work</span><span
+                                class="task-count">3</span></li>
+                    </ul>
+                </li>
+                <li class="with-circle sidenav-link">Notes</li>
+            </ul>
+            <div class="add-button">
+                <i class="fa-solid fa-plus"></i>
+                <span>Create new</span>
+            </div>
+        </nav>
+
+        <div class="todo-container">
+            <h1 class="current-section">
+                <span class="current-section_title">Activities for today: </span>
+            </h1>
+            <h2 class="no-activities"><span>You have no activities for today!</span></h2>
+            <div class="activities-container">
+                <!--                <div class="task">-->
+                <!--                    <label>-->
+                <!--                        <input type="radio">-->
+                <!--                    </label>-->
+                <!--                    <span>Name of the task</span>-->
+                <!--                    <span class="date">Date</span>-->
+                <!--                    <i class="fa-solid fa-trash"></i>-->
+                <!--                </div>-->
+                <form action="#" class="add-task_form hidden">
+                    <input type="text" class="add-task_input" placeholder="Add a task name...">
+                    <div class="add-task_buttons">
+                        <button class="confirm-task">
+                            Add
+                        </button>
+                        <button class="cancel-task">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+                <section class="add-task_section">
+                    <button class="add-task_button">
+                        +
+                    </button>
+                    <p class="add-task_text">
+                        Add a task
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="main.js"></script>
 </body>

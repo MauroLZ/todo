@@ -1,0 +1,16 @@
+header {
+    height: 14vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+header h1 {
+    margin-left: 5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 5px;
+}

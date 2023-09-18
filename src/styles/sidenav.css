@@ -1,0 +1,65 @@
+.sidenav {
+    width: 26vw;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutral-color);
+    justify-content: flex-start;
+    font-weight: lighter;
+    font-size: 36px;
+    align-items: flex-start; /* Align everything to the left */
+}
+
+.sidenav ul {
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.sidenav ul li {
+    font-size: 28px;
+    margin: 1.8rem 0 0 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.sidenav ul li:hover {
+    color: var(--hover-color);
+}
+
+.sub-menu_title {
+    font-size: 24px;
+}
+
+/* Style list items with circles */
+.with-circle {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Align both text and task-count to the right */
+    align-items: center; /* Vertically center task-count */
+}
+
+.task-count {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 6rem;
+    padding: 7px 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.add-button {
+    background-color: var(--primary-color);
+    margin: 5rem 0 0 2.5rem;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+.add-button:hover {
+    background-color: var(--hover-button-color);
+}

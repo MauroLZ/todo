@@ -1,0 +1,216 @@
+.todo-container {
+    width: 74vw;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Use white or a very light gray for the main content area */
+}
+
+.current-section_title  {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.no-activities {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 75%;
+}
+
+.add-task_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+
+.add-task_button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 9px 17px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    margin: 30px 40px 20px 0;
+}
+
+.add-task_button:hover {
+    background-color: var(--hover-button-color);
+}
+
+.add-task_text {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 40px 20px 0;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--neutral-color);
+    border-radius: 8px;
+}
+
+/* Style the label container to remove default styles */
+.task label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px; /* Adjust the padding as needed */
+    cursor: pointer;
+}
+
+/* Style the checkbox input */
+.task input[type="checkbox"] {
+    opacity: 0; /* Hide the default checkbox */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px; /* Adjust the size of the checkbox */
+    height: 25px; /* Adjust the size of the checkbox */
+}
+
+/* Style the custom checkbox shape */
+.task input[type="checkbox"] + span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px; /* Adjust the size of the checkbox */
+    height: 25px; /* Adjust the size of the checkbox */
+    background-color: var(--neutral-color); /* Background color of the unchecked checkbox */
+    border: 2px solid var(--text-color); /* Border color of the checkbox */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Style the custom checkbox shape when checked */
+.task input[type="checkbox"]:checked + span:before {
+    background-color: var(--primary-color); /* Background color of the checked checkbox */
+    border: 2px solid var(--text-color); /* Border color of the checkbox */
+}
+
+
+.task span {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-right: 3rem;
+    color: var(--text-color);
+    width: 50%;
+    background-color: var(--neutral-color);
+    overflow: hidden;
+}
+
+.task .date {
+    font-size: 1.5rem;
+    width: 20%;
+    font-weight: lighter;
+    color: var(--text-color);
+    background-color: var(--neutral-color);
+}
+
+.task > span, .task > input[type="radio"], .task > .date, .task > i {
+    cursor: pointer;
+}
+
+/* Form to add a task */
+.add-task_form {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-task_form input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--text-color);
+    background-color: var(--neutral-color);
+}
+
+.add-task_form input[type="text"]:focus {
+    outline: none;
+}
+
+.add-task_input::placeholder {
+    margin-left: 20px;
+    color: #999;
+    font-style: italic;
+}
+
+.add-task_buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+}
+
+.add-task_buttons > .confirm-task, .add-task_buttons > .cancel-task {
+    border: none;
+    width: 500px;
+    height: 100%;
+    font-weight: lighter;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+.confirm-task {
+    background-color: var(--success-color)
+}
+
+.confirm-task:hover {
+    background-color: #31B469FF;
+}
+
+.cancel-task {
+    background-color: var(--primary-red)
+}
+
+.cancel-task:hover {
+    background-color: #b03d31;
+}
+
+/* Hidden class that hides elements */
+.hidden {
+    display: none;
+}
